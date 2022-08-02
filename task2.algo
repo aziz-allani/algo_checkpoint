@@ -1,0 +1,27 @@
+ALGORITHM checkpoint1
+
+VAR
+
+  
+    tab1: ARRAY_OF INTEGER[10]; 
+   tab2: ARRAY_OF INTEGER[10]; 
+   
+   
+   i,sum : INTEGER;
+BEGIN
+ 
+
+ sum:=0;
+   FOR i FROM 0 TO tab1.length-1 STEP 1  DO
+   FOR i FROM 0 TO tab2.length-1 STEP 1  DO
+         if(tab1[i]<>tab2[i])
+          sum:=sum+1; 
+      
+   END_FOR
+   END_FOR
+
+
+
+  write("elements which are present in either of the given set ");
+  read(sum);
+END

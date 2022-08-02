@@ -1,0 +1,44 @@
+ALGORITHM checkpoint1
+
+VAR
+
+   str: STRING[50];
+ 
+    tab : ARRAY_OF string[5];
+   i,sum ,wordcount,vycount : INTEGER;
+BEGIN
+   Write("Give a string that ends with a point");
+   Read(str);
+   
+  
+       FOR i FROM 0 TO str.length-1 STEP 1 DO
+           IF (str.length[i]-1<>".") THEN
+              write("string non validée");
+              break;
+           else
+              write("string validée") ; 
+           END_IF
+
+   wordcount:=0;     
+        IF (str[i]==" ") THEN
+              
+              wordcount:=wordcount+1;
+         END_IF
+  vycount:=0;
+  tab := {a,e,u,o,i}; 
+       IF (str[i] in tab) THEN
+             
+              vycount:=vycount+1;
+         END_IF
+
+      END_FOR
+
+
+
+
+  write("The number of words in the sentence ");
+  read(wordcount);
+  write("The number of vowels in the sentence ");
+  read(vycount);
+ 
+END
